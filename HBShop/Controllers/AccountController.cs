@@ -26,6 +26,7 @@ namespace HBShop.Controllers
         public AccountController(ApplicationUserManager userManager)
         {
             UserManager = userManager;
+            //things changed
         }
 
         public ApplicationUserManager UserManager {
