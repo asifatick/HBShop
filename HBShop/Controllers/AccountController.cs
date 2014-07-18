@@ -27,7 +27,7 @@ namespace HBShop.Controllers
         {
             UserManager = userManager;
             //things changed
-            // the second change
+            // the second chang
 
         }
 
