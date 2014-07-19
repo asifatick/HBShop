@@ -176,6 +176,8 @@
     <Compile Include="Models\ItemMaster.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\OrderMaster.cs" />
+    <Compile Include="Models\ProductCategory.cs" />
+    <Compile Include="Models\ProductSubCategory.cs" />
     <Compile Include="Models\StockReceive.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />

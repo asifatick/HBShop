@@ -21,6 +21,8 @@ namespace HBShop.Models
         public System.Data.Entity.DbSet<HBShop.Models.Client> Clients { get; set; }
 
         public System.Data.Entity.DbSet<HBShop.Models.Item> Items { get; set; }
+        public System.Data.Entity.DbSet<HBShop.Models.ProductCategory> ProductCategory { get; set; }
+        public System.Data.Entity.DbSet<HBShop.Models.ProductSubCategory> ProductSubCategory { get; set; }
         
     }
 }
