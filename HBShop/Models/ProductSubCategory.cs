@@ -12,6 +12,7 @@ namespace HBShop.Models
         public long UserID { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
-        public virtual ProductCategory<Category> Category {get; set;}
+        public virtual ProductCategory ProductCategory { get; set; }
+    }
        
 }
