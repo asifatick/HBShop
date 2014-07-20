@@ -7,7 +7,7 @@ namespace HBShop.Models
 {
     public class StockReceive
     {
-        public virtual int  ItemId { get; set; }
+        public virtual int ID { get; set; }
         public DateTime EntryDate { get; set; }
         public int EntryQuantity { get; set; }
         public string From { get; set; }

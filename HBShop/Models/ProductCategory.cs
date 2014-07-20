@@ -8,7 +8,7 @@ namespace HBShop.Models
     public class ProductCategory
     {
       
-        public long CategoryId { get; set; }
+        public long ID { get; set; }
         public String Name { get; set; }
         public long UserID { get; set; }
         public System.DateTime UpdateDate { get; set; }
