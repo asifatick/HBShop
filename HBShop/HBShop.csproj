@@ -180,10 +180,6 @@
     <Compile Include="Models\OrderMaster.cs" />
     <Compile Include="Models\ProductCategory.cs" />
     <Compile Include="Models\Products.cs" />
-    <Compile Include="Models\ProductSubCategory.cs" />
-    <Compile Include="Models\Product_Order.cs" />
-    <Compile Include="Models\Purchases_Products.cs" />
-    <Compile Include="Models\Sales.cs" />
     <Compile Include="Models\StockReceive.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

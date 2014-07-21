@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HBShop.Models
 {
-    public class OrderMaster
+    public class Order
     {
         public int OrderId { get; set; }
         public virtual int  ClientId { get; set; }
