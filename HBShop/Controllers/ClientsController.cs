@@ -27,7 +27,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Clients.Find(id);
+            Clients client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -46,7 +46,7 @@ namespace HBShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ClientId,ClientName,TotalReceive,TotalPaid,Advance,Due")] Client client)
+        public ActionResult Create([Bind(Include = "ClientId,ClientName,TotalReceive,TotalPaid,Advance,Due")] Clients client)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Clients.Find(id);
+            Clients client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace HBShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ClientId,ClientName,TotalReceive,TotalPaid,Advance,Due")] Client client)
+        public ActionResult Edit([Bind(Include = "ClientId,ClientName,TotalReceive,TotalPaid,Advance,Due")] Clients client)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Client client = db.Clients.Find(id);
+            Clients client = db.Clients.Find(id);
             if (client == null)
             {
                 return HttpNotFound();
@@ -109,7 +109,7 @@ namespace HBShop.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Client client = db.Clients.Find(id);
+            Clients client = db.Clients.Find(id);
             db.Clients.Remove(client);
             db.SaveChanges();
             return RedirectToAction("Index");

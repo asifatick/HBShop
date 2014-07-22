@@ -17,7 +17,7 @@ namespace HBShop.Controllers
         // GET: /Items/
         public ActionResult Index()
         {
-            return View(db.Products.ToList());
+            return View(db.Items.ToList());
         }
 
         // GET: /Items/Details/5
@@ -27,7 +27,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Products item = db.Products.Find(id);
+            Items item = db.Items.Find(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -46,16 +46,16 @@ namespace HBShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,ProductCategory,CategoryId,CurrentStock")] Products Products)
+        public ActionResult Create([Bind(Include = "ID,Name,ProductCategory,CategoryId,CurrentStock")] Items items)
         {
             if (ModelState.IsValid)
             {
-                db.Products.Add(Products);
+                db.Items.Add(Item);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(Products);
+            return View(Item);
         }
 
         // GET: /Items/Edit/5
@@ -65,7 +65,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Products item = db.Products.Find(id);
+            Items item = db.Items.Find(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -78,15 +78,15 @@ namespace HBShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,ItemName,ReorderLevel,CategoryId,CurrentStock")] Products Products)
+        public ActionResult Edit([Bind(Include = "ItemId,ItemName,ReorderLevel,CategoryId,CurrentStock")] Items items)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(Products).State = EntityState.Modified;
+                db.Entry(Item).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(Products);
+            return View(Item);
         }
 
         // GET: /Items/Delete/5
@@ -96,7 +96,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Products item = db.Products.Find(id);
+            Items item = db.Items.Find(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace HBShop.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Products item = db.Products.Find(id);
-            db.Products.Remove(item);
+            Items item = db.Items.Find(id);
+            db.Items.Remove(item);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -123,5 +123,7 @@ namespace HBShop.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public Items Item { get; set; }
     }
 }
