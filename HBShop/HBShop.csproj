@@ -169,18 +169,20 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountMasters.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Categorys.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Expenses.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Items.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\OrderMaster.cs" />
-    <Compile Include="Models\ProductCategory.cs" />
-    <Compile Include="Models\Products.cs" />
     <Compile Include="Models\StockReceive.cs" />
+    <Compile Include="Models\Stocks.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
