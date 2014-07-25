@@ -20,7 +20,7 @@ namespace HBShop.Models
 
         public System.Data.Entity.DbSet<HBShop.Models.Account> Accounts { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.AccountMaster> AccountMasters { get; set; }
-        public System.Data.Entity.DbSet<HBShop.Models.Category> Categorys { get; set; }
+        public System.Data.Entity.DbSet<HBShop.Models.Category> Categories { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Client> Clients { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Company> Company { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Expense> Expenses { get; set; }
