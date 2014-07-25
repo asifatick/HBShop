@@ -7,7 +7,7 @@ namespace HBShop.Models
 {
     public class Client
     {
-        public int ClientId { get; set; }
+        public long ClientId { get; set; }
         public string ClientName { get; set; }
         public string Addressee { get; set; }
         public string PhoneNo { get; set; }

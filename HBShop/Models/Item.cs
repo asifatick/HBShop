@@ -11,8 +11,13 @@ namespace HBShop.Models
         public String ItemName { get; set; }
         public String Size { get; set; }
         public String ItemCode { get; set; }
-        public virtual Category CategoryId { get; set; }
-        public virtual AccountMaster UserId { get; set; }
+        public int ReorderLevel { get; set; }
+        public int StockInHand { get; set; }
+        public long CategoryId { get; set; }
+        public string  ApplicationUserId { get; set; }
+        public virtual Category Category { get; set; }
+
+        public virtual ApplicationUser User { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
     }

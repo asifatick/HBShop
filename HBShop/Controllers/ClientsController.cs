@@ -112,7 +112,9 @@ namespace HBShop.Controllers
             Client client = db.Clients.Find(id);
             db.Clients.Remove(client);
             db.SaveChanges();
+          
             return RedirectToAction("Index");
+           
         }
 
         protected override void Dispose(bool disposing)

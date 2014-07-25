@@ -171,6 +171,22 @@
     <Compile Include="Migrations\201407251904395_init3.Designer.cs">
       <DependentUpon>201407251904395_init3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201407252151138_ModifyCategoryInItem.cs" />
+    <Compile Include="Migrations\201407252151138_ModifyCategoryInItem.Designer.cs">
+      <DependentUpon>201407252151138_ModifyCategoryInItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407252155185_AddedReordeLevelInItem.cs" />
+    <Compile Include="Migrations\201407252155185_AddedReordeLevelInItem.Designer.cs">
+      <DependentUpon>201407252155185_AddedReordeLevelInItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407252209485_AddedStockInHandInItem.cs" />
+    <Compile Include="Migrations\201407252209485_AddedStockInHandInItem.Designer.cs">
+      <DependentUpon>201407252209485_AddedStockInHandInItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407252221040_UpdatedOrderDetail.cs" />
+    <Compile Include="Migrations\201407252221040_UpdatedOrderDetail.Designer.cs">
+      <DependentUpon>201407252221040_UpdatedOrderDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountMasters.cs" />
@@ -265,6 +281,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201407251904395_init3.resx">
       <DependentUpon>201407251904395_init3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407252151138_ModifyCategoryInItem.resx">
+      <DependentUpon>201407252151138_ModifyCategoryInItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407252155185_AddedReordeLevelInItem.resx">
+      <DependentUpon>201407252155185_AddedReordeLevelInItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407252209485_AddedStockInHandInItem.resx">
+      <DependentUpon>201407252209485_AddedStockInHandInItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407252221040_UpdatedOrderDetail.resx">
+      <DependentUpon>201407252221040_UpdatedOrderDetail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
