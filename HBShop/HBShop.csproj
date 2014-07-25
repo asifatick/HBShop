@@ -167,21 +167,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201407251904395_init3.cs" />
+    <Compile Include="Migrations\201407251904395_init3.Designer.cs">
+      <DependentUpon>201407251904395_init3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountMasters.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Models\Categorys.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\Expenses.cs" />
+    <Compile Include="Models\Expense.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Items.cs" />
     <Compile Include="Models\OrderDetails.cs" />
     <Compile Include="Models\OrderMaster.cs" />
-    <Compile Include="Models\Stocks.cs" />
+    <Compile Include="Models\Stock.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -257,6 +261,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201407251904395_init3.resx">
+      <DependentUpon>201407251904395_init3.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

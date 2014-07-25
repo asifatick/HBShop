@@ -5,16 +5,12 @@ using System.Web;
 
 namespace HBShop.Models
 {
-    public class OrderMaster
+    public class Category
     {
-        public int OrderMasterId { get; set; }
-        public virtual int  ClientId { get; set; }
-        public DateTime Date { get; set; }
-        public float TotalAmount { get; set; }
-        public float Received { get; set; }
+        public long CategoryId { get; set; }
+        public String CategoryName { get; set; }
         public virtual AccountMaster UserId { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
-
     }
 }

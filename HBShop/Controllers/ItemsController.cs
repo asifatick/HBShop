@@ -27,7 +27,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Items item = db.Items.Find(id);
+            Item item = db.Items.Find(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -46,7 +46,7 @@ namespace HBShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,ProductCategory,CategoryId,CurrentStock")] Items items)
+        public ActionResult Create([Bind(Include = "ID,Name,ProductCategory,CategoryId,CurrentStock")] Item items)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Items item = db.Items.Find(id);
+            Item item = db.Items.Find(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace HBShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,ItemName,ReorderLevel,CategoryId,CurrentStock")] Items items)
+        public ActionResult Edit([Bind(Include = "ItemId,ItemName,ReorderLevel,CategoryId,CurrentStock")] Item items)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Items item = db.Items.Find(id);
+            Item item = db.Items.Find(id);
             if (item == null)
             {
                 return HttpNotFound();
@@ -109,7 +109,7 @@ namespace HBShop.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Items item = db.Items.Find(id);
+            Item item = db.Items.Find(id);
             db.Items.Remove(item);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -124,6 +124,6 @@ namespace HBShop.Controllers
             base.Dispose(disposing);
         }
 
-        public Items Item { get; set; }
+        public Item Item { get; set; }
     }
 }

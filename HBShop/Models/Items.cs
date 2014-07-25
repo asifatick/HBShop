@@ -5,14 +5,14 @@ using System.Web;
 
 namespace HBShop.Models
 {
-    public class Items
+    public class Item
     {
-        public long ID { get; set; }
+        public long ItemId { get; set; }
         public String ItemName { get; set; }
         public String Size { get; set; }
         public String ItemCode { get; set; }
-        public virtual Categorys category { get; set; }
-        public long UserID { get; set; }
+        public virtual Category CategoryId { get; set; }
+        public virtual AccountMaster UserId { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
     }

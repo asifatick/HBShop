@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HBShop.Models
 {
-    public class Clients
+    public class Client
     {
         public int ClientId { get; set; }
         public string ClientName { get; set; }
@@ -16,7 +16,7 @@ namespace HBShop.Models
         public float TotalPaid { get; set; }
         public float Advance { get; set; }
         public float Due { get; set; }
-        public long UserID { get; set; }
+        public virtual AccountMaster UserId { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
 
