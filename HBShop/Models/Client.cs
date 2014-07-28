@@ -12,11 +12,13 @@ namespace HBShop.Models
         public string Addressee { get; set; }
         public string PhoneNo { get; set; }
         public string MobilNo { get; set; }
-        public float TotalReceive { get; set; }
-        public float TotalPaid { get; set; }
-        public float Advance { get; set; }
-        public float Due { get; set; }
-        public virtual AccountMaster UserId { get; set; }
+        
+        public decimal Advance { get; set; }
+        public decimal Due { get; set; }
+        public long CountryId { get; set; }
+        public virtual Country Country { get; set; }
+        public string ApplicationUserId { get; set; }
+        public virtual ApplicationUser User { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
 

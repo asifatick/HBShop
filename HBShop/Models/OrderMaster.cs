@@ -14,11 +14,22 @@ namespace HBShop.Models
         public DateTime Date { get; set; }
         public float TotalAmount { get; set; }
         public float Received { get; set; }
-        public virtual AccountMaster UserId { get; set; }
+        public OrderStatus Status { get; set; }
+
+      
+
+        public string ApplicationUserId { get; set; }
+        public virtual ApplicationUser User { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
-        
-        
 
+
+        public enum OrderStatus
+        {
+            Ordered =0,
+            Paid,
+            Delivered,
+            Shipped
+        }
     }
 }

@@ -22,13 +22,12 @@ namespace HBShop.Models
         public System.Data.Entity.DbSet<HBShop.Models.AccountMaster> AccountMasters { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Category> Categories { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Client> Clients { get; set; }
-        public System.Data.Entity.DbSet<HBShop.Models.Company> Company { get; set; }
-        public System.Data.Entity.DbSet<HBShop.Models.Expense> Expenses { get; set; }
+       // public System.Data.Entity.DbSet<HBShop.Models.Company> Company { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Item> Items { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.OrderDetail> OrderDetails { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.OrderMaster> OrderMaster { get; set; }
 
-        public System.Data.Entity.DbSet<HBShop.Models.Stock> Stocks { get; set; }
+        public System.Data.Entity.DbSet<HBShop.Models.StockReceived> Stocks { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Supplier> Supplier { get; set; }
        
         

@@ -10,11 +10,16 @@ namespace HBShop.Models
         public long SupplierId { get; set; }
         public string Name { get; set; }
         public string ContractParson { get; set; }
-        public string Addressee { get; set; }
+        public string Address { get; set; }
         public string PhoneNo { get; set; }
         public string MobilNo { get; set; }
         public double Deposit { get; set; }
-        public virtual AccountMaster UserId { get; set; }
+        public long CountryId { get; set; }
+        public virtual Country Country { get; set; }
+        public string ApplicationUserId { get; set; }
+        public virtual ApplicationUser User { get; set; }
+        public decimal Advance { get; set; }
+        public decimal Due { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
 
