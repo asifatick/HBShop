@@ -8,7 +8,6 @@ namespace HBShop.Models
     public class AccountMaster
     {
         public long AccountMasterId { get; set; }
-
         public decimal Debit { get; set; }
         public decimal Credit { get; set; }
         public DateTime DateTime { get; set; }
