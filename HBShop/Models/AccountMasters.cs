@@ -14,5 +14,6 @@ namespace HBShop.Models
         public DateTime DateTime { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
+//       public Type { get; set; }
     }
 }
