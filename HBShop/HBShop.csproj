@@ -195,6 +195,10 @@
     <Compile Include="Migrations\201408051300263_AddedCountryUnit.Designer.cs">
       <DependentUpon>201408051300263_AddedCountryUnit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201408101339535_allModels.cs" />
+    <Compile Include="Migrations\201408101339535_allModels.Designer.cs">
+      <DependentUpon>201408101339535_allModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountMasters.cs" />
@@ -310,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408051300263_AddedCountryUnit.resx">
       <DependentUpon>201408051300263_AddedCountryUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408101339535_allModels.resx">
+      <DependentUpon>201408101339535_allModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
