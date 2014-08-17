@@ -15,7 +15,7 @@ namespace HBShop.Models
         public float TotalAmount { get; set; }
         public float Received { get; set; }
         public OrderStatus Status { get; set; }
-
+        public List<OrderDetail> Details { get; set; }
         public string ApplicationUserId { get; set; }
         public virtual ApplicationUser User { get; set; }
         public System.DateTime UpdateDate { get; set; }
