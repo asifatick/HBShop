@@ -16,10 +16,10 @@ namespace HBShop.Models
         public double Deposit { get; set; }
         public long CountryId { get; set; }
         public virtual Country Country { get; set; }
-        public string ApplicationUserId { get; set; }
-        public virtual ApplicationUser User { get; set; }
         public decimal Advance { get; set; }
         public decimal Due { get; set; }
+        public List<Item> Items { get; set; }
+        public virtual ApplicationUser User { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
 
