@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using  System.Data;
 using HBShop.Models;
 
 namespace HBShop.DAL
@@ -24,39 +26,55 @@ namespace HBShop.DAL
             this.context = context;
         }
 
-        public void Dispose()
-        {
-            throw new NotImplementedException();
-        }
-
+       
         public IEnumerable<Category> GetCategories()
         {
-            throw new NotImplementedException();
+            return context.Categories.ToList();
         }
 
         public Category GetCategoryByID(long categoryId)
         {
-            throw new NotImplementedException();
+            return context.Categories.Find(categoryId);
         }
 
         public void InsertCategory(Category category)
         {
-            throw new NotImplementedException();
+            context.Categories.Add(category);
         }
 
         public void DeleteCategory(long categoryId)
         {
-            throw new NotImplementedException();
+            Category category = context.Categories.Find(categoryId);
+            context.Categories.Remove(category);
         }
 
         public void UpdateCategory(Category category)
         {
-            throw new NotImplementedException();
+           context.Entry(category).State = EntityState.Modified;
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            context.SaveChanges();
+        }
+
+        private bool disposed = false;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (! this.disposed)
+            {
+                if (disposing)
+                {
+                    context.Dispose();
+                }
+            }
+            this.disposed = true;
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }
