@@ -26,7 +26,7 @@ namespace HBShop.Controllers
             this.categoryRepository = categoryRepository;
         }
 
-        public  ViewResult Index(string categoryName)
+        //public  ViewResult Index(string categoryName)
         //private HBShopContext context = new HBShopContext();
 
         ////
