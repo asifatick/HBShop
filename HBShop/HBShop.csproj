@@ -161,7 +161,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
@@ -204,6 +204,10 @@
     <Compile Include="Migrations\201408170617279_AddedOrderDetailToOMaster.cs" />
     <Compile Include="Migrations\201408170617279_AddedOrderDetailToOMaster.Designer.cs">
       <DependentUpon>201408170617279_AddedOrderDetailToOMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201408231511088_AddedbatchCountryUnit.cs" />
+    <Compile Include="Migrations\201408231511088_AddedbatchCountryUnit.Designer.cs">
+      <DependentUpon>201408231511088_AddedbatchCountryUnit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -334,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201408170617279_AddedOrderDetailToOMaster.resx">
       <DependentUpon>201408170617279_AddedOrderDetailToOMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201408231511088_AddedbatchCountryUnit.resx">
+      <DependentUpon>201408231511088_AddedbatchCountryUnit.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

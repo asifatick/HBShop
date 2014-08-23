@@ -28,8 +28,11 @@ namespace HBShop.Models
         public System.Data.Entity.DbSet<HBShop.Models.OrderMaster> OrderMaster { get; set; }
 
         public System.Data.Entity.DbSet<HBShop.Models.StockReceived> Stocks { get; set; }
-        public System.Data.Entity.DbSet<HBShop.Models.Supplier> Supplier { get; set; }
-       
+        public System.Data.Entity.DbSet<HBShop.Models.Supplier> Suppliers { get; set; }
+        public System.Data.Entity.DbSet<HBShop.Models.Country> Countries { get; set; }
+        public System.Data.Entity.DbSet<HBShop.Models.Unit> Units { get; set; }
+        public System.Data.Entity.DbSet<HBShop.Models.Batch> Batches { get; set; }
+
         
     }
 }
