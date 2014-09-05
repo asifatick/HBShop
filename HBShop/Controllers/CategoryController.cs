@@ -26,19 +26,19 @@ namespace HBShop.Controllers
             this.categoryRepository = categoryRepository;
         }
 
-        //public ViewResult Index()
-        //{
-        //    var category = CategoryRepository.GetCategory();
-        //    return View(Category.ToList);
+        public ViewResult Index()
+        {
+            var categories = categoryRepository.GetCategories();
+            return View(categories.ToList());
 
-        //}
+        }
 
         public ViewResult Details(long CategoryId)
         {
             Category category = categoryRepository.GetCategoryByID(CategoryId);
             return View(category);
         }
-
+        // get
         public ActionResult Create()
         {
             return View(new Category{ });
@@ -76,19 +76,21 @@ namespace HBShop.Controllers
         ////
         //// POST: /Categories/Create
 
-        //[HttpPost]
-        //public ActionResult Create(Category category)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        context.Categories.Add(category);
-        //        context.SaveChanges();
-        //        return RedirectToAction("Index");  
-        //    }
+        [HttpPost]
+        public ActionResult Create(Category category)
+        {
+            if (ModelState.IsValid)
+            {
+                category.UpdateDate = DateTime.Now;
+                category.ApplicationUserId = User.Identity.GetUserId();
+                categoryRepository.InsertCategory(category);
+                categoryRepository.Save();
+                return RedirectToAction("Index");
+            }
 
-        //   // ViewBag.PossibleApplicationUsers = UserManager.ge context.ApplicationUsers;
-        //    return View(category);
-        //}
+            // ViewBag.PossibleApplicationUsers = UserManager.ge context.ApplicationUsers;
+            return View(category);
+        }
 
         ////
         //// GET: /Categories/Edit/5
