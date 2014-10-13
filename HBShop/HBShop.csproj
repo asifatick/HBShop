@@ -161,61 +161,66 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AccountMasterController.cs" />
+    <Compile Include="Controllers\BatchController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\ClientsController.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
+    <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\OrderDetatilController.cs" />
+    <Compile Include="Controllers\OrderMasterController.cs" />
+    <Compile Include="Controllers\StockReceivedController.cs" />
+    <Compile Include="Controllers\SupplierController.cs" />
+    <Compile Include="Controllers\UnitController.cs" />
+    <Compile Include="DAL\AccountMasterRepository.cs" />
+    <Compile Include="DAL\AccountRepository.cs" />
+    <Compile Include="DAL\BatchRepository.cs" />
     <Compile Include="DAL\CategoryRepository.cs" />
+    <Compile Include="DAL\ClientRepository.cs" />
+    <Compile Include="DAL\CountryRepository.cs" />
+    <Compile Include="DAL\GenericRepository.cs" />
+    <Compile Include="DAL\ItemRepository.cs" />
+    <Compile Include="DAL\OrderDetatilRepository.cs" />
+    <Compile Include="DAL\OrderMasterRepository.cs" />
+    <Compile Include="DAL\StockReceivedRepository.cs" />
+    <Compile Include="DAL\SupplierRepository.cs" />
+    <Compile Include="DAL\UnitOfWork.cs" />
+    <Compile Include="DAL\UnitRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201407251116516_Added.cs" />
-    <Compile Include="Migrations\201407251116516_Added.Designer.cs">
-      <DependentUpon>201407251116516_Added.cs</DependentUpon>
+    <Compile Include="Migrations\201409111431545_InitialCreate.cs" />
+    <Compile Include="Migrations\201409111431545_InitialCreate.Designer.cs">
+      <DependentUpon>201409111431545_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201407251904395_init3.cs" />
-    <Compile Include="Migrations\201407251904395_init3.Designer.cs">
-      <DependentUpon>201407251904395_init3.cs</DependentUpon>
+    <Compile Include="Migrations\201409121059042_1st.cs" />
+    <Compile Include="Migrations\201409121059042_1st.Designer.cs">
+      <DependentUpon>201409121059042_1st.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201407252151138_ModifyCategoryInItem.cs" />
-    <Compile Include="Migrations\201407252151138_ModifyCategoryInItem.Designer.cs">
-      <DependentUpon>201407252151138_ModifyCategoryInItem.cs</DependentUpon>
+    <Compile Include="Migrations\201409141539181_2nd.cs" />
+    <Compile Include="Migrations\201409141539181_2nd.Designer.cs">
+      <DependentUpon>201409141539181_2nd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201407252155185_AddedReordeLevelInItem.cs" />
-    <Compile Include="Migrations\201407252155185_AddedReordeLevelInItem.Designer.cs">
-      <DependentUpon>201407252155185_AddedReordeLevelInItem.cs</DependentUpon>
+    <Compile Include="Migrations\201409221428559_3rd.cs" />
+    <Compile Include="Migrations\201409221428559_3rd.Designer.cs">
+      <DependentUpon>201409221428559_3rd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201407252209485_AddedStockInHandInItem.cs" />
-    <Compile Include="Migrations\201407252209485_AddedStockInHandInItem.Designer.cs">
-      <DependentUpon>201407252209485_AddedStockInHandInItem.cs</DependentUpon>
+    <Compile Include="Migrations\201409221651279_4th.cs" />
+    <Compile Include="Migrations\201409221651279_4th.Designer.cs">
+      <DependentUpon>201409221651279_4th.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201407252221040_UpdatedOrderDetail.cs" />
-    <Compile Include="Migrations\201407252221040_UpdatedOrderDetail.Designer.cs">
-      <DependentUpon>201407252221040_UpdatedOrderDetail.cs</DependentUpon>
+    <Compile Include="Migrations\201409221728344_5th.cs" />
+    <Compile Include="Migrations\201409221728344_5th.Designer.cs">
+      <DependentUpon>201409221728344_5th.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201408051300263_AddedCountryUnit.cs" />
-    <Compile Include="Migrations\201408051300263_AddedCountryUnit.Designer.cs">
-      <DependentUpon>201408051300263_AddedCountryUnit.cs</DependentUpon>
+    <Compile Include="Migrations\201409260436385_cng0001.cs" />
+    <Compile Include="Migrations\201409260436385_cng0001.Designer.cs">
+      <DependentUpon>201409260436385_cng0001.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201408101339535_allModels.cs" />
-    <Compile Include="Migrations\201408101339535_allModels.Designer.cs">
-      <DependentUpon>201408101339535_allModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201408170617279_AddedOrderDetailToOMaster.cs" />
-    <Compile Include="Migrations\201408170617279_AddedOrderDetailToOMaster.Designer.cs">
-      <DependentUpon>201408170617279_AddedOrderDetailToOMaster.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201408231511088_AddedbatchCountryUnit.cs" />
-    <Compile Include="Migrations\201408231511088_AddedbatchCountryUnit.Designer.cs">
-      <DependentUpon>201408231511088_AddedbatchCountryUnit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201409051155510_latest.cs" />
-    <Compile Include="Migrations\201409051155510_latest.Designer.cs">
-      <DependentUpon>201409051155510_latest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201409051255196_latest765.cs" />
-    <Compile Include="Migrations\201409051255196_latest765.Designer.cs">
-      <DependentUpon>201409051255196_latest765.cs</DependentUpon>
+    <Compile Include="Migrations\201409270659317_cl.cs" />
+    <Compile Include="Migrations\201409270659317_cl.Designer.cs">
+      <DependentUpon>201409270659317_cl.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -228,38 +233,440 @@
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\ChartOfAccount.cs" />
-    <Compile Include="Models\HBShopContext.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\OrderMaster.cs" />
-    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\StockReceived.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Unit.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="App_Data\aspnet-HBShop-20140704115112.mdf" />
+    <Content Include="App_Data\aspnet-HBShop-20140704115112_log.ldf">
+      <DependentUpon>aspnet-HBShop-20140704115112.mdf</DependentUpon>
+    </Content>
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\EntityFramework.dll" />
+    <Content Include="bin\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\HBShop.dll" />
+    <Content Include="bin\HBShop.pdb" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="bin\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.dll" />
+    <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="bin\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\Owin.dll" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\WebGrease.dll" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\Template\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="Content\Template\img\arrow-down.png" />
+    <Content Include="Content\Template\img\arrow-right.png" />
+    <Content Include="Content\Template\img\ashok.jpg" />
+    <Content Include="Content\Template\img\bg_direction_nav.png" />
+    <Content Include="Content\Template\img\facebook.png" />
+    <Content Include="Content\Template\img\favicon\favicon.png" />
+    <Content Include="Content\Template\img\foot-quote.png" />
+    <Content Include="Content\Template\img\googleplus.png" />
+    <Content Include="Content\Template\img\linkedin.png" />
+    <Content Include="Content\Template\img\photos\1.jpg" />
+    <Content Include="Content\Template\img\photos\2.jpg" />
+    <Content Include="Content\Template\img\photos\3.jpg" />
+    <Content Include="Content\Template\img\photos\4.jpg" />
+    <Content Include="Content\Template\img\photos\5.jpg" />
+    <Content Include="Content\Template\img\photos\6.jpg" />
+    <Content Include="Content\Template\img\photos\7.jpg" />
+    <Content Include="Content\Template\img\photos\8.jpg" />
+    <Content Include="Content\Template\img\photos\s1.jpg" />
+    <Content Include="Content\Template\img\photos\s2.jpg" />
+    <Content Include="Content\Template\img\photos\s3.jpg" />
+    <Content Include="Content\Template\img\photos\s4.jpg" />
+    <Content Include="Content\Template\img\photos\s5.jpg" />
+    <Content Include="Content\Template\img\photos\s6.jpg" />
+    <Content Include="Content\Template\img\photos\s7.jpg" />
+    <Content Include="Content\Template\img\photos\s8.jpg" />
+    <Content Include="Content\Template\img\photos\tn_1.jpg" />
+    <Content Include="Content\Template\img\photos\tn_11.jpg" />
+    <Content Include="Content\Template\img\photos\tn_2.jpg" />
+    <Content Include="Content\Template\img\photos\tn_22.jpg" />
+    <Content Include="Content\Template\img\photos\tn_3.jpg" />
+    <Content Include="Content\Template\img\photos\tn_33.jpg" />
+    <Content Include="Content\Template\img\photos\tn_4.jpg" />
+    <Content Include="Content\Template\img\photos\tn_44.jpg" />
+    <Content Include="Content\Template\img\photos\tn_5.jpg" />
+    <Content Include="Content\Template\img\photos\tn_55.jpg" />
+    <Content Include="Content\Template\img\photos\tn_6.jpg" />
+    <Content Include="Content\Template\img\photos\tn_66.jpg" />
+    <Content Include="Content\Template\img\photos\tn_7.jpg" />
+    <Content Include="Content\Template\img\photos\tn_77.jpg" />
+    <Content Include="Content\Template\img\photos\tn_8.jpg" />
+    <Content Include="Content\Template\img\photos\tn_88.jpg" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\Template\img\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\Template\img\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\Template\img\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\Template\img\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\Template\img\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\Template\img\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\Template\img\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\Template\img\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\Template\img\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\Template\img\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\Template\img\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\Template\img\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Content\Template\img\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\Template\img\quote-blue.png" />
+    <Content Include="Content\Template\img\quote-green.png" />
+    <Content Include="Content\Template\img\quote-red.png" />
+    <Content Include="Content\Template\img\rss.png" />
+    <Content Include="Content\Template\img\twitter.png" />
+    <Content Include="Content\Template\style\blue.css" />
+    <Content Include="Content\Template\style\bootstrap-responsive.css" />
+    <Content Include="Content\Template\style\bootstrap.css" />
+    <Content Include="Content\Template\style\ddlevelsmenu-base.css" />
+    <Content Include="Content\Template\style\ddlevelsmenu-topbar.css" />
+    <Content Include="Content\Template\style\flexslider.css" />
+    <Content Include="Content\Template\style\font-awesome-ie7.css" />
+    <Content Include="Content\Template\style\font-awesome.css" />
+    <Content Include="Content\Template\style\green.css" />
+    <Content Include="Content\Template\style\prettyPhoto.css" />
+    <Content Include="Content\Template\style\red.css" />
+    <Content Include="Content\Template\style\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll" />
+    <Content Include="packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.pdb" />
+    <Content Include="packages\bootstrap.3.0.0\Content\Content\bootstrap-theme.css" />
+    <Content Include="packages\bootstrap.3.0.0\Content\Content\bootstrap-theme.min.css" />
+    <Content Include="packages\bootstrap.3.0.0\Content\Content\bootstrap.css" />
+    <Content Include="packages\bootstrap.3.0.0\Content\Content\bootstrap.min.css" />
+    <Content Include="packages\bootstrap.3.0.0\Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="packages\bootstrap.3.0.0\Content\Scripts\bootstrap.js" />
+    <Content Include="packages\bootstrap.3.0.0\Content\Scripts\bootstrap.min.js" />
+    <Content Include="packages\EntityFramework.6.1.1\lib\net40\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.1.1\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.1.1\lib\net40\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll" />
+    <Content Include="packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="packages\EntityFramework.6.1.1\lib\net45\EntityFramework.xml" />
+    <Content Include="packages\EntityFramework.6.1.1\tools\about_EntityFramework.help.txt" />
+    <Content Include="packages\EntityFramework.6.1.1\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="packages\EntityFramework.6.1.1\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="packages\EntityFramework.6.1.1\tools\migrate.exe" />
+    <Content Include="HBShop.sln.DotSettings" />
+    <None Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2-vsdoc.js" />
+    <Content Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2.js" />
+    <Content Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2.min.js" />
+    <None Include="packages\jQuery.1.10.2\Tools\jquery-1.10.2.intellisense.js" />
+    <None Include="packages\jQuery.Validation.1.11.1\Content\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="packages\jQuery.Validation.1.11.1\Content\Scripts\jquery.validate.js" />
+    <Content Include="packages\jQuery.Validation.1.11.1\Content\Scripts\jquery.validate.min.js" />
+    <Content Include="packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll" />
+    <Content Include="packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.xml" />
+    <Content Include="packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll" />
+    <Content Include="packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.xml" />
+    <Content Include="packages\Microsoft.AspNet.Identity.Owin.2.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll" />
+    <Content Include="packages\Microsoft.AspNet.Identity.Owin.2.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.xml" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.dll" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.1.2\lib\net45\System.Web.Mvc.xml" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.1.2\lib\net45\System.Web.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\system.web.optimization.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.Helpers.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Deployment.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.dll" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.Razor.xml" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\lib\net45\System.Web.WebPages.xml" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.1.2\Content\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.1.2\Content\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="packages\Microsoft.Owin.2.1.0\lib\net40\Microsoft.Owin.dll" />
+    <Content Include="packages\Microsoft.Owin.2.1.0\lib\net40\Microsoft.Owin.XML" />
+    <Content Include="packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll" />
+    <Content Include="packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.XML" />
+    <Content Include="packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net40\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net40\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll" />
+    <Content Include="packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.xml" />
+    <Content Include="packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll" />
+    <Content Include="packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.XML" />
+    <Content Include="packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll" />
+    <Content Include="packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.xml" />
+    <Content Include="packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll" />
+    <Content Include="packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.XML" />
+    <Content Include="packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll" />
+    <Content Include="packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.XML" />
+    <Content Include="packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll" />
+    <Content Include="packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.XML" />
+    <Content Include="packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll" />
+    <Content Include="packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.XML" />
+    <Content Include="packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll" />
+    <Content Include="packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.XML" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="packages\Modernizr.2.6.2\Content\Scripts\modernizr-2.6.2.js" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\content\InstallationDummyFile.txt" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Owin.1.0\lib\net40\Owin.dll" />
+    <Content Include="packages\Respond.1.2.0\content\Scripts\respond.js" />
+    <Content Include="packages\Respond.1.2.0\content\Scripts\respond.min.js" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\content\InstallationDummyFile.txt" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\content\InstallationDummyFile.txt" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\T4Scaffolding.dll" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\T4Scaffolding.NuGetServices.dll" />
+    <Content Include="packages\WebGrease.1.5.2\lib\WebGrease.dll" />
+    <Content Include="packages\WebGrease.1.5.2\tools\WG.exe" />
     <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\custom.min.js" />
+    <Content Include="Scripts\ddlevelsmenu.js" />
+    <Content Include="Scripts\easing.js" />
+    <Content Include="Scripts\flexslider.js" />
+    <Content Include="Scripts\gmap.js" />
+    <Content Include="Scripts\html5shim.js" />
+    <Content Include="Content\Template\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="Content\Template\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="Content\Template\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="bin\HBShop.dll.config" />
+    <Content Include="packages\Antlr.3.4.1.9004\Antlr.3.4.1.9004.nupkg" />
+    <Content Include="packages\Antlr.3.4.1.9004\Antlr.3.4.1.9004.nuspec" />
+    <Content Include="packages\bootstrap.3.0.0\bootstrap.3.0.0.nupkg" />
+    <Content Include="packages\bootstrap.3.0.0\bootstrap.3.0.0.nuspec" />
+    <Content Include="packages\bootstrap.3.0.0\Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages\bootstrap.3.0.0\Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="packages\bootstrap.3.0.0\Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="packages\EntityFramework.6.1.1\content\App.config.transform" />
+    <Content Include="packages\EntityFramework.6.1.1\content\Web.config.transform" />
+    <Content Include="packages\EntityFramework.6.1.1\EntityFramework.6.1.1.nupkg" />
+    <Content Include="packages\EntityFramework.6.1.1\EntityFramework.6.1.1.nuspec" />
+    <Content Include="packages\EntityFramework.6.1.1\tools\EntityFramework.psd1" />
+    <Content Include="packages\EntityFramework.6.1.1\tools\EntityFramework.psm1" />
+    <Content Include="packages\EntityFramework.6.1.1\tools\init.ps1" />
+    <Content Include="packages\EntityFramework.6.1.1\tools\install.ps1" />
+    <Content Include="packages\jQuery.1.10.2\Content\Scripts\jquery-1.10.2.min.map" />
+    <Content Include="packages\jQuery.1.10.2\jQuery.1.10.2.nupkg" />
+    <Content Include="packages\jQuery.1.10.2\jQuery.1.10.2.nuspec" />
+    <Content Include="packages\jQuery.1.10.2\Tools\common.ps1" />
+    <Content Include="packages\jQuery.1.10.2\Tools\install.ps1" />
+    <Content Include="packages\jQuery.1.10.2\Tools\uninstall.ps1" />
+    <Content Include="packages\jQuery.Validation.1.11.1\jQuery.Validation.1.11.1.nupkg" />
+    <Content Include="packages\jQuery.Validation.1.11.1\jQuery.Validation.1.11.1.nuspec" />
+    <Content Include="packages\Microsoft.AspNet.Identity.Core.2.0.0\Microsoft.AspNet.Identity.Core.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Identity.Core.2.0.0\Microsoft.AspNet.Identity.Core.2.0.0.nuspec" />
+    <Content Include="packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\Microsoft.AspNet.Identity.EntityFramework.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\Microsoft.AspNet.Identity.EntityFramework.2.0.0.nuspec" />
+    <Content Include="packages\Microsoft.AspNet.Identity.Owin.2.0.0\Microsoft.AspNet.Identity.Owin.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Identity.Owin.2.0.0\Microsoft.AspNet.Identity.Owin.2.0.0.nuspec" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.1.2\Content\Web.config.install.xdt" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.1.2\Content\Web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.1.2\Microsoft.AspNet.Mvc.5.1.2.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Mvc.5.1.2\Microsoft.AspNet.Mvc.5.1.2.nuspec" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.1.2\Microsoft.AspNet.Razor.3.1.2.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Razor.3.1.2\Microsoft.AspNet.Razor.3.1.2.nuspec" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\Microsoft.AspNet.Web.Optimization.1.1.3.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.Web.Optimization.1.1.3\Microsoft.AspNet.Web.Optimization.1.1.3.nuspec" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\Content\Web.config.install.xdt" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\Content\Web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\Microsoft.AspNet.WebPages.3.1.2.nupkg" />
+    <Content Include="packages\Microsoft.AspNet.WebPages.3.1.2\Microsoft.AspNet.WebPages.3.1.2.nuspec" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.1.2\Microsoft.jQuery.Unobtrusive.Validation.3.1.2.nupkg" />
+    <Content Include="packages\Microsoft.jQuery.Unobtrusive.Validation.3.1.2\Microsoft.jQuery.Unobtrusive.Validation.3.1.2.nuspec" />
+    <Content Include="packages\Microsoft.Owin.2.1.0\Microsoft.Owin.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.2.1.0\Microsoft.Owin.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Owin.Host.SystemWeb.2.1.0\Microsoft.Owin.Host.SystemWeb.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.Host.SystemWeb.2.1.0\Microsoft.Owin.Host.SystemWeb.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Owin.Security.2.1.0\Microsoft.Owin.Security.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.Security.2.1.0\Microsoft.Owin.Security.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Owin.Security.Cookies.2.1.0\Microsoft.Owin.Security.Cookies.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.Security.Cookies.2.1.0\Microsoft.Owin.Security.Cookies.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Owin.Security.Facebook.2.1.0\Microsoft.Owin.Security.Facebook.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.Security.Facebook.2.1.0\Microsoft.Owin.Security.Facebook.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Owin.Security.Google.2.1.0\Microsoft.Owin.Security.Google.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.Security.Google.2.1.0\Microsoft.Owin.Security.Google.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\Microsoft.Owin.Security.MicrosoftAccount.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\Microsoft.Owin.Security.MicrosoftAccount.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Owin.Security.OAuth.2.1.0\Microsoft.Owin.Security.OAuth.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.Security.OAuth.2.1.0\Microsoft.Owin.Security.OAuth.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Owin.Security.Twitter.2.1.0\Microsoft.Owin.Security.Twitter.2.1.0.nupkg" />
+    <Content Include="packages\Microsoft.Owin.Security.Twitter.2.1.0\Microsoft.Owin.Security.Twitter.2.1.0.nuspec" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nupkg" />
+    <Content Include="packages\Microsoft.Web.Infrastructure.1.0.0.0\Microsoft.Web.Infrastructure.1.0.0.0.nuspec" />
+    <Content Include="packages\Modernizr.2.6.2\Modernizr.2.6.2.nupkg" />
+    <Content Include="packages\Modernizr.2.6.2\Modernizr.2.6.2.nuspec" />
+    <Content Include="packages\Modernizr.2.6.2\Tools\common.ps1" />
+    <Content Include="packages\Modernizr.2.6.2\Tools\install.ps1" />
+    <Content Include="packages\Modernizr.2.6.2\Tools\uninstall.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\MvcScaffolding.1.0.8-vs2013.nupkg" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\MvcScaffolding.1.0.8-vs2013.nuspec" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\ActionUnitTest\MvcScaffolding.ActionUnitTest.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\ActionUnitTest\TestClass.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\ActionUnitTest\TestClass.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\ActionUnitTest\TestMethod.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\ActionUnitTest\TestMethod.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\ActionWithUnitTest\MvcScaffolding.ActionWithUnitTest.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Action\Action.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Action\Action.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Action\ActionPost.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Action\ActionPost.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Action\MvcScaffolding.Action.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Action\ViewModel.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Action\ViewModel.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Create.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Create.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\CreateOrEdit.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\CreateOrEdit.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Delete.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Delete.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Details.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Details.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Edit.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Edit.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Empty.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Empty.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Index.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\Index.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\AspxView\MvcScaffolding.AspxView.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Controller\ControllerWithContext.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Controller\ControllerWithContext.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Controller\ControllerWithRepository.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Controller\ControllerWithRepository.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Controller\MvcScaffolding.Controller.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Controller\MvcScaffolding.ControllerWithRepository.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\init.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\install.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Create.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Create.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Delete.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Delete.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Details.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Details.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Edit.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Edit.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Empty.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Empty.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Index.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\Index.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\MvcScaffolding.RazorView.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\_CreateOrEdit.cs.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\RazorView\_CreateOrEdit.vb.t4" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\registerWithMvcTooling.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\scaffoldViaDialogTempScript.ps1" />
+    <Content Include="packages\MvcScaffolding.1.0.8-vs2013\tools\Views\MvcScaffolding.Views.ps1" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\Newtonsoft.Json.5.0.6.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\Newtonsoft.Json.5.0.6.nuspec" />
+    <Content Include="packages\Owin.1.0\Owin.1.0.nupkg" />
+    <Content Include="packages\Owin.1.0\Owin.1.0.nuspec" />
+    <Content Include="packages\repositories.config" />
+    <Content Include="packages\Respond.1.2.0\Respond.1.2.0.nupkg" />
+    <Content Include="packages\Respond.1.2.0\Respond.1.2.0.nuspec" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\T4Scaffolding.1.0.7-vs2013.nupkg" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\T4Scaffolding.1.0.7-vs2013.nuspec" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\EFDbContext\DbContext.cs.t4" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\EFDbContext\DbContext.vb.t4" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\EFDbContext\DbContextEntityMember.cs.t4" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\EFDbContext\DbContextEntityMember.vb.t4" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\EFDbContext\T4Scaffolding.EFDbContext.ps1" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\EFRepository\Repository.cs.t4" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\EFRepository\Repository.vb.t4" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\EFRepository\T4Scaffolding.EFRepository.ps1" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\init.ps1" />
+    <Content Include="packages\T4Scaffolding.1.0.7-vs2013\tools\install.ps1" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\T4Scaffolding.Core.1.0.0-vs2013.nupkg" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\T4Scaffolding.Core.1.0.0-vs2013.nuspec" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\CustomScaffolder\DefaultPs1Script.ps1.t4" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\CustomScaffolder\DefaultT4Template.cs.t4" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\CustomScaffolder\DefaultT4Template.vb.t4" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\CustomScaffolder\T4Scaffolding.CustomScaffolder.ps1" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\CustomTemplate\T4Scaffolding.CustomTemplate.ps1" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\init.ps1" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\install.ps1" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\scaffoldingTabExpansion.psm1" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\T4Scaffolding.Format.ps1xml" />
+    <Content Include="packages\T4Scaffolding.Core.1.0.0-vs2013\tools\uninstall.ps1" />
+    <Content Include="packages\WebGrease.1.5.2\tools\install.ps1" />
+    <Content Include="packages\WebGrease.1.5.2\tools\uninstall.ps1" />
+    <Content Include="packages\WebGrease.1.5.2\WebGrease.1.5.2.nupkg" />
+    <Content Include="packages\WebGrease.1.5.2\WebGrease.1.5.2.nuspec" />
+    <Content Include="scaffolding.config" />
+    <None Include="Scripts\jquery-2.0.2.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.2.js" />
+    <Content Include="Scripts\jquery-2.0.2.min.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\_references.js" />
+    <None Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -271,12 +678,6 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
@@ -291,22 +692,56 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Clients\Create.cshtml" />
-    <Content Include="Views\Clients\Delete.cshtml" />
-    <Content Include="Views\Clients\Details.cshtml" />
-    <Content Include="Views\Clients\Edit.cshtml" />
-    <Content Include="Views\Clients\Index.cshtml" />
-    <Content Include="Views\Items\Create.cshtml" />
-    <Content Include="Views\Items\Delete.cshtml" />
-    <Content Include="Views\Items\Details.cshtml" />
-    <Content Include="Views\Items\Edit.cshtml" />
-    <Content Include="Views\Items\Index.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Batch\Index.cshtml" />
+    <Content Include="Views\Batch\Details.cshtml" />
+    <Content Include="Views\Batch\Create.cshtml" />
+    <Content Include="Views\Batch\Edit.cshtml" />
+    <Content Include="Views\Batch\Delete.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Unit\Index.cshtml" />
+    <Content Include="Views\Unit\Details.cshtml" />
+    <Content Include="Views\Unit\Create.cshtml" />
+    <Content Include="Views\Unit\Edit.cshtml" />
+    <Content Include="Views\Unit\Delete.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Client\Details.cshtml" />
+    <Content Include="Views\Client\Create.cshtml" />
+    <Content Include="Views\Client\Edit.cshtml" />
+    <Content Include="Views\StockReceived\Details.cshtml" />
+    <Content Include="Views\StockReceived\Create.cshtml" />
+    <Content Include="Views\StockReceived\Index.cshtml" />
+    <Content Include="Views\StockReceived\Delete.cshtml" />
+    <Content Include="Views\StockReceived\Edit.cshtml" />
+    <Content Include="Views\Supplier\Index.cshtml" />
+    <Content Include="Views\Supplier\Details.cshtml" />
+    <Content Include="Views\Supplier\Create.cshtml" />
+    <Content Include="Views\Supplier\Edit.cshtml" />
+    <Content Include="Views\Supplier\Delete.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
+    <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\OrderDetatil\Index.cshtml" />
+    <Content Include="Views\OrderDetatil\Details.cshtml" />
+    <Content Include="Views\OrderDetatil\Create.cshtml" />
+    <Content Include="Views\OrderDetatil\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Content\images\" />
+    <Folder Include="Content\Template\css\" />
+    <Folder Include="Content\Template\js\" />
+    <Folder Include="Views\Country\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -314,43 +749,32 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-2.0.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201407251116516_Added.resx">
-      <DependentUpon>201407251116516_Added.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409111431545_InitialCreate.resx">
+      <DependentUpon>201409111431545_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201407251904395_init3.resx">
-      <DependentUpon>201407251904395_init3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409121059042_1st.resx">
+      <DependentUpon>201409121059042_1st.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201407252151138_ModifyCategoryInItem.resx">
-      <DependentUpon>201407252151138_ModifyCategoryInItem.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409141539181_2nd.resx">
+      <DependentUpon>201409141539181_2nd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201407252155185_AddedReordeLevelInItem.resx">
-      <DependentUpon>201407252155185_AddedReordeLevelInItem.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409221428559_3rd.resx">
+      <DependentUpon>201409221428559_3rd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201407252209485_AddedStockInHandInItem.resx">
-      <DependentUpon>201407252209485_AddedStockInHandInItem.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409221651279_4th.resx">
+      <DependentUpon>201409221651279_4th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201407252221040_UpdatedOrderDetail.resx">
-      <DependentUpon>201407252221040_UpdatedOrderDetail.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409221728344_5th.resx">
+      <DependentUpon>201409221728344_5th.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201408051300263_AddedCountryUnit.resx">
-      <DependentUpon>201408051300263_AddedCountryUnit.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409260436385_cng0001.resx">
+      <DependentUpon>201409260436385_cng0001.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201408101339535_allModels.resx">
-      <DependentUpon>201408101339535_allModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201408170617279_AddedOrderDetailToOMaster.resx">
-      <DependentUpon>201408170617279_AddedOrderDetailToOMaster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201408231511088_AddedbatchCountryUnit.resx">
-      <DependentUpon>201408231511088_AddedbatchCountryUnit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409051155510_latest.resx">
-      <DependentUpon>201409051155510_latest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201409051255196_latest765.resx">
-      <DependentUpon>201409051255196_latest765.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201409270659317_cl.resx">
+      <DependentUpon>201409270659317_cl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -5,146 +5,126 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using HBShop.Models;
-using  HBShop.DAL;
+using HBShop.DAL;
 using Microsoft.AspNet.Identity;
-//using  PagedList;
 
 namespace HBShop.Controllers
 {   
     public class CategoryController : Controller
     {
+        private UnitOfWork uow = new UnitOfWork();
 
-        private ICategoryRepository categoryRepository;
+        //private ICategoryRepository categoryRepository;
 
-        public CategoryController()
-        {
-            this.categoryRepository = new CategoryRepository(new ApplicationDbContext());
-        }
+        //public CategoryController()
+        //{
+        //    this.categoryRepository = new CategoryRepository(new ApplicationDbContext());
+        //}
 
-        public CategoryController(ICategoryRepository categoryRepository)
-        {
-            this.categoryRepository = categoryRepository;
-        }
+        //public CategoryController(ICategoryRepository categoryRepository)
+        //{
+        //    this.categoryRepository = categoryRepository;
+        //}
 
         public ViewResult Index()
         {
-            var categories = categoryRepository.GetCategories();
+            var categories = uow.CategoryRepo.GetCategories();
             return View(categories.ToList());
-
         }
 
-        public ViewResult Details(long CategoryId)
+        public ViewResult Details(long categoryId)
         {
-            Category category = categoryRepository.GetCategoryByID(CategoryId);
+            Category category = uow.CategoryRepo.GetCategoryById(categoryId);
             return View(category);
         }
+        
         // get
         public ActionResult Create()
         {
             return View(new Category{ });
         }
 
-        //private HBShopContext context = new HBShopContext();
-
-        ////
-        //// GET: /Categories/
-
-
-        //public ViewResult Index()
-        //{
-        //    return View(context.Categories.Where(c=> c.CategoryId == 2).j ToList());
-        //}
-
-        ////
-        //// GET: /Categories/Details/5
-
-        //public ViewResult Details(long id)
-        //{
-        //    Category category = context.Categories.Single(x => x.CategoryId == id);
-        //    return View(category);
-        //}
-
-        ////
-        //// GET: /Categories/Create
-
-        //public ActionResult Create()
-        //{
-        //    //ViewBag.PossibleApplicationUsers = ApplicationUsers;
-        //    return View();
-        //} 
-
-        ////
-        //// POST: /Categories/Create
-
         [HttpPost]
         public ActionResult Create(Category category)
         {
-            if (ModelState.IsValid)
+            try
             {
-                category.UpdateDate = DateTime.Now;
-                category.ApplicationUserId = User.Identity.GetUserId();
-                categoryRepository.InsertCategory(category);
-                categoryRepository.Save();
+                if (ModelState.IsValid)
+                {
+                    category.UpdateDate = DateTime.Now;
+                    category.ApplicationUserId = User.Identity.GetUserId();
+                    uow.CategoryRepo.InsertCategory(category);
+                    uow.CategoryRepo.Save();
+                }
                 return RedirectToAction("Index");
             }
+            catch
+            {
+                return View(category);
+            }
+        }
+       
+        // GET: /Categories/Edit/5
 
-            // ViewBag.PossibleApplicationUsers = UserManager.ge context.ApplicationUsers;
+        public ActionResult Edit(long categoryId)
+        {
+            Category category = uow.CategoryRepo.GetCategoryById(categoryId);
+            return View(category);
+            
+        }
+        
+        // POST: /Categories/Edit/5
+        [HttpPost]
+        public ActionResult Edit(long? categoryId, Category category)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    uow.CategoryRepo.UpdateCategory(category);
+                    uow.CategoryRepo.Save();
+                }
+                return RedirectToAction("Index");
+                
+            }
+            catch
+            {
+                return View(category);
+            }
+        }
+
+        ////
+                //// GET: /Categories/Delete/5
+
+        public ActionResult Delete(long categoryId)
+        {
+            Category category = uow.CategoryRepo.GetCategoryById(categoryId);
             return View(category);
         }
 
         ////
-        //// GET: /Categories/Edit/5
-
-        //public ActionResult Edit(long id)
-        //{
-        //    Category category = context.Categories.Single(x => x.CategoryId == id);
-        //   // ViewBag.PossibleApplicationUsers = context.ApplicationUsers;
-        //    return View(category);
-        //}
-
-        ////
-        //// POST: /Categories/Edit/5
-
-        //[HttpPost]
-        //public ActionResult Edit(Category category)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        context.Entry(category).State = EntityState.Modified;
-        //        context.SaveChanges();
-        //        return RedirectToAction("Index");
-        //    }
-        //  //  ViewBag.PossibleApplicationUsers = context.ApplicationUsers;
-        //    return View(category);
-        //}
-
-        ////
-        //// GET: /Categories/Delete/5
-
-        //public ActionResult Delete(long id)
-        //{
-        //    Category category = context.Categories.Single(x => x.CategoryId == id);
-        //    return View(category);
-        //}
-
-        ////
         //// POST: /Categories/Delete/5
 
-        //[HttpPost, ActionName("Delete")]
-        //public ActionResult DeleteConfirmed(long id)
-        //{
-        //    Category category = context.Categories.Single(x => x.CategoryId == id);
-        //    context.Categories.Remove(category);
-        //    context.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
-
-        //protected override void Dispose(bool disposing)
-        //{
-        //    if (disposing) {
-        //        context.Dispose();
-        //    }
-        //    base.Dispose(disposing);
-        //}
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(long categoryId)
+        {
+            try
+            {            
+                Category category = uow.CategoryRepo.GetCategoryById(categoryId);
+                uow.CategoryRepo.DeleteCategory(categoryId);
+                uow.CategoryRepo.Save();
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        protected override void Dispose(bool disposing)
+        {
+            //uow.CategoryRepo.Dispose();
+            uow.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

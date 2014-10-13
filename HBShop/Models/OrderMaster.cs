@@ -20,7 +20,6 @@ namespace HBShop.Models
         public virtual ApplicationUser User { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
-
         public enum OrderStatus
         {
             Ordered =0,

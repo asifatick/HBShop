@@ -10,6 +10,7 @@ namespace HBShop.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "HBShop.Models.ApplicationDbContext";
         }
 
         protected override void Seed(HBShop.Models.ApplicationDbContext context)

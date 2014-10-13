@@ -14,14 +14,12 @@ namespace HBShop.Models
         public virtual Item Item { get; set; }
         public decimal UnitPrice { get; set; }
         public long UnitId { get; set; }
-        public virtual HBShop.Models.Unit Unit { get; set; }
+        public virtual Unit Unit { get; set; }
         public int Quantity { get; set; }
         public decimal Total { get; set; }
-        public string ApplicationUserId { get; set; }
         public virtual ApplicationUser User { get; set; }
         public System.DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
-
 
     }
 }

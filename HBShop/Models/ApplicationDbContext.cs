@@ -26,7 +26,6 @@ namespace HBShop.Models
         public System.Data.Entity.DbSet<HBShop.Models.Item> Items { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.OrderDetail> OrderDetails { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.OrderMaster> OrderMaster { get; set; }
-
         public System.Data.Entity.DbSet<HBShop.Models.StockReceived> Stocks { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Supplier> Suppliers { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Country> Countries { get; set; }

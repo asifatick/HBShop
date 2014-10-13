@@ -6,28 +6,30 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using HBShop.DAL;
 using HBShop.Models;
 
 namespace HBShop.Controllers
 {
     public class ItemsController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
-
+        //private ApplicationDbContext db = new ApplicationDbContext();
+        UnitOfWork uow = new UnitOfWork();
+        
         // GET: /Items/
         public ActionResult Index()
         {
-            return View(db.Items.ToList());
+            return View(uow.ItemRepo.GetItems().ToList());
         }
 
         // GET: /Items/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(long? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
+            Item item = uow.ItemRepo.GetItemById(id.Value);
             if (item == null)
             {
                 return HttpNotFound();
@@ -38,6 +40,7 @@ namespace HBShop.Controllers
         // GET: /Items/Create
         public ActionResult Create()
         {
+            ViewBag.CategoryId = new SelectList(uow.CategoryRepo.GetCategories(), "CategoryId", "CategoryName");
             return View();
         }
 
@@ -46,16 +49,17 @@ namespace HBShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name,ProductCategory,CategoryId,CurrentStock")] Item items)
+        public ActionResult Create( Item item)
         {
             if (ModelState.IsValid)
             {
-                db.Items.Add(Item);
-                db.SaveChanges();
+                item.UpdateDate = DateTime.Now;
+                uow.ItemRepo.InsertItem(item);
+                uow.Save();
                 return RedirectToAction("Index");
             }
 
-            return View(Item);
+            return View(item);
         }
 
         // GET: /Items/Edit/5
@@ -65,7 +69,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
+            Item item = uow.ItemRepo.GetItemById(id.Value);
             if (item == null)
             {
                 return HttpNotFound();
@@ -78,15 +82,15 @@ namespace HBShop.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemId,ItemName,ReorderLevel,CategoryId,CurrentStock")] Item items)
+        public ActionResult Edit(Item item)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(Item).State = EntityState.Modified;
-                db.SaveChanges();
+                uow.ItemRepo.UpdateItem(item);
+                uow.Save();
                 return RedirectToAction("Index");
             }
-            return View(Item);
+            return View(item);
         }
 
         // GET: /Items/Delete/5
@@ -96,7 +100,7 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Item item = db.Items.Find(id);
+            Item item = uow.ItemRepo.GetItemById(id.Value);
             if (item == null)
             {
                 return HttpNotFound();
@@ -109,21 +113,17 @@ namespace HBShop.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Item item = db.Items.Find(id);
-            db.Items.Remove(item);
-            db.SaveChanges();
+            uow.ItemRepo.DeleteItem(id);
+            uow.Save();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
-                db.Dispose();
+                uow.Dispose();
             }
             base.Dispose(disposing);
-        }
-
-        public Item Item { get; set; }
+        }    
     }
 }
