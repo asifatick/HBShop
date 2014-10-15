@@ -10,11 +10,10 @@ namespace HBShop.Models
         public long AccountId { get; set; }
         public string AccountName { get; set; }
         public double Amount { get; set; }
-        public DateTime DateTime { get; set; }
         public string Type { get; set; }
-        public string ApplicationUserId { get; set; }
+        public DateTime Date { get; set; }
         public virtual ApplicationUser User { get; set; }
-        public System.DateTime UpdateDate { get; set; }
+        public DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
 
     }

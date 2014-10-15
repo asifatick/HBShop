@@ -14,7 +14,6 @@ namespace HBShop.Models
         public int ReorderLevel { get; set; }
         public int StockInHand { get; set; }
         public long CategoryId { get; set; }
-        public string  ApplicationUserId { get; set; }
         public virtual Category Category { get; set; }
         public virtual ApplicationUser User { get; set; }
         public System.DateTime UpdateDate { get; set; }

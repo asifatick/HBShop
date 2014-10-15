@@ -12,15 +12,15 @@ namespace HBShop.Models
         public string ContractParson { get; set; }
         public string Address { get; set; }
         public string PhoneNo { get; set; }
-        public string MobilNo { get; set; }
+        public string MobileNo { get; set; }
         public double Deposit { get; set; }
-        public long CountryId { get; set; }
         public virtual Country Country { get; set; }
         public decimal Advance { get; set; }
         public decimal Due { get; set; }
         public List<Item> Items { get; set; }
+        public DateTime Date { get; set; }
         public virtual ApplicationUser User { get; set; }
-        public System.DateTime UpdateDate { get; set; }
+        public DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
 
     }

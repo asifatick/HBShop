@@ -10,7 +10,6 @@ namespace HBShop.Models
         public long ChartOfAccountId { get; set; }
         public string Name { get; set; }
        // public string Type { get; set; }
-        public string ApplicationUserId { get; set; }
         public virtual ApplicationUser User { get; set; }
         public System.DateTime CreateDate { get; set; }
         public System.DateTime UpdateDate { get; set; }

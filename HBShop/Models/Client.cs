@@ -9,7 +9,7 @@ namespace HBShop.Models
     {
         public long ClientId { get; set; }
         public string ClientName { get; set; }
-        public string Addressee { get; set; }
+        public string Addresse { get; set; }
         public string PhoneNo { get; set; }
         public string MobilNo { get; set; }        
         public decimal Advance { get; set; }

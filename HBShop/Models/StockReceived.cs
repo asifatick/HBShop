@@ -10,16 +10,17 @@ namespace HBShop.Models
     {
 
         public long StockReceivedId { get; set; }
-        public long ItemId { get; set; }
         public virtual Item Item { get; set; }
         public int Quantity { get; set; }
-        public long SupplierId { get; set; }
+        
         public virtual Supplier Supplier { get; set; }
-        public string BatchNo { get; set; }
+        public string Batch { get; set; }
         public decimal CostPerUnit { get; set; }
-        public long UnitId { get; set; }        
+        public virtual Unit  Unit{ get; set; }
+        public DateTime Date { get; set; }
         public virtual ApplicationUser User { get; set; }
-        public System.DateTime UpdateDate { get; set; }
+        public DateTime UpdateDate { get; set; }
         public bool IsDeleted { get; set; }
+
     }
 }

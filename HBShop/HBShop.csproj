@@ -222,6 +222,10 @@
     <Compile Include="Migrations\201409270659317_cl.Designer.cs">
       <DependentUpon>201409270659317_cl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201410131421543_AddedAfterEid.cs" />
+    <Compile Include="Migrations\201410131421543_AddedAfterEid.Designer.cs">
+      <DependentUpon>201410131421543_AddedAfterEid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountMasters.cs" />
@@ -775,6 +779,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201409270659317_cl.resx">
       <DependentUpon>201409270659317_cl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410131421543_AddedAfterEid.resx">
+      <DependentUpon>201410131421543_AddedAfterEid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

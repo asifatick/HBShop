@@ -1,0 +1,152 @@
+namespace HBShop.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class AddedAfterEid : DbMigration
+    {
+        public override void Up()
+        {
+            DropForeignKey("dbo.OrderDetails", "OrderMasterId", "dbo.OrderMasters");
+            DropForeignKey("dbo.OrderDetails", "UnitId", "dbo.Units");
+            DropForeignKey("dbo.OrderMasters", "ClientId", "dbo.Clients");
+            DropForeignKey("dbo.StockReceiveds", "ItemId", "dbo.Items");
+            DropForeignKey("dbo.StockReceiveds", "SupplierId", "dbo.Suppliers");
+            DropForeignKey("dbo.Suppliers", "CountryId", "dbo.Countries");
+            DropIndex("dbo.OrderDetails", new[] { "OrderMasterId" });
+            DropIndex("dbo.OrderDetails", new[] { "UnitId" });
+            DropIndex("dbo.OrderMasters", new[] { "ClientId" });
+            DropIndex("dbo.StockReceiveds", new[] { "ItemId" });
+            DropIndex("dbo.StockReceiveds", new[] { "SupplierId" });
+            DropIndex("dbo.Suppliers", new[] { "CountryId" });
+            RenameColumn(table: "dbo.Accounts", name: "ApplicationUserId", newName: "User_Id");
+            RenameColumn(table: "dbo.Items", name: "ApplicationUserId", newName: "User_Id");
+            RenameColumn(table: "dbo.OrderDetails", name: "OrderMasterId", newName: "OrderMaster_OrderMasterId");
+            RenameColumn(table: "dbo.OrderDetails", name: "UnitId", newName: "Unit_Id");
+            RenameColumn(table: "dbo.OrderMasters", name: "ClientId", newName: "Client_ClientId");
+            RenameColumn(table: "dbo.OrderMasters", name: "ApplicationUserId", newName: "User_Id");
+            RenameColumn(table: "dbo.StockReceiveds", name: "ItemId", newName: "Item_ItemId");
+            RenameColumn(table: "dbo.StockReceiveds", name: "SupplierId", newName: "Supplier_SupplierId");
+            RenameColumn(table: "dbo.Suppliers", name: "CountryId", newName: "Country_Id");
+            RenameIndex(table: "dbo.Accounts", name: "IX_ApplicationUserId", newName: "IX_User_Id");
+            RenameIndex(table: "dbo.Items", name: "IX_ApplicationUserId", newName: "IX_User_Id");
+            RenameIndex(table: "dbo.OrderMasters", name: "IX_ApplicationUserId", newName: "IX_User_Id");
+            AddColumn("dbo.AccountMasters", "Date", c => c.DateTime(nullable: false));
+            AddColumn("dbo.AccountMasters", "User_Id", c => c.String(maxLength: 128));
+            AddColumn("dbo.Accounts", "Date", c => c.DateTime(nullable: false));
+            AddColumn("dbo.Clients", "Addresse", c => c.String());
+            AddColumn("dbo.Countries", "Date", c => c.DateTime(nullable: false));
+            AddColumn("dbo.Countries", "UpdateDate", c => c.DateTime(nullable: false));
+            AddColumn("dbo.Countries", "IsDeleted", c => c.Boolean(nullable: false));
+            AddColumn("dbo.Countries", "User_Id", c => c.String(maxLength: 128));
+            AddColumn("dbo.OrderDetails", "Date", c => c.DateTime(nullable: false));
+            AddColumn("dbo.StockReceiveds", "Batch", c => c.String());
+            AddColumn("dbo.StockReceiveds", "Date", c => c.DateTime(nullable: false));
+            AddColumn("dbo.StockReceiveds", "Unit_Id", c => c.Long());
+            AddColumn("dbo.Suppliers", "MobileNo", c => c.String());
+            AddColumn("dbo.Suppliers", "Date", c => c.DateTime(nullable: false));
+            AlterColumn("dbo.OrderDetails", "OrderMaster_OrderMasterId", c => c.Long());
+            AlterColumn("dbo.OrderDetails", "Unit_Id", c => c.Long());
+            AlterColumn("dbo.OrderMasters", "Client_ClientId", c => c.Long());
+            AlterColumn("dbo.StockReceiveds", "Item_ItemId", c => c.Long());
+            AlterColumn("dbo.StockReceiveds", "Supplier_SupplierId", c => c.Long());
+            AlterColumn("dbo.Suppliers", "Country_Id", c => c.Long());
+            CreateIndex("dbo.AccountMasters", "User_Id");
+            CreateIndex("dbo.Countries", "User_Id");
+            CreateIndex("dbo.OrderDetails", "OrderMaster_OrderMasterId");
+            CreateIndex("dbo.OrderDetails", "Unit_Id");
+            CreateIndex("dbo.OrderMasters", "Client_ClientId");
+            CreateIndex("dbo.StockReceiveds", "Item_ItemId");
+            CreateIndex("dbo.StockReceiveds", "Supplier_SupplierId");
+            CreateIndex("dbo.StockReceiveds", "Unit_Id");
+            CreateIndex("dbo.Suppliers", "Country_Id");
+            AddForeignKey("dbo.AccountMasters", "User_Id", "dbo.AspNetUsers", "Id");
+            AddForeignKey("dbo.Countries", "User_Id", "dbo.AspNetUsers", "Id");
+            AddForeignKey("dbo.StockReceiveds", "Unit_Id", "dbo.Units", "Id");
+            AddForeignKey("dbo.OrderDetails", "OrderMaster_OrderMasterId", "dbo.OrderMasters", "OrderMasterId");
+            AddForeignKey("dbo.OrderDetails", "Unit_Id", "dbo.Units", "Id");
+            AddForeignKey("dbo.OrderMasters", "Client_ClientId", "dbo.Clients", "ClientId");
+            AddForeignKey("dbo.StockReceiveds", "Item_ItemId", "dbo.Items", "ItemId");
+            AddForeignKey("dbo.StockReceiveds", "Supplier_SupplierId", "dbo.Suppliers", "SupplierId");
+            AddForeignKey("dbo.Suppliers", "Country_Id", "dbo.Countries", "Id");
+            DropColumn("dbo.AccountMasters", "DateTime");
+            DropColumn("dbo.Accounts", "DateTime");
+            DropColumn("dbo.Clients", "Addressee");
+            DropColumn("dbo.StockReceiveds", "BatchNo");
+            DropColumn("dbo.StockReceiveds", "UnitId");
+            DropColumn("dbo.Suppliers", "MobilNo");
+        }
+        
+        public override void Down()
+        {
+            AddColumn("dbo.Suppliers", "MobilNo", c => c.String());
+            AddColumn("dbo.StockReceiveds", "UnitId", c => c.Long(nullable: false));
+            AddColumn("dbo.StockReceiveds", "BatchNo", c => c.String());
+            AddColumn("dbo.Clients", "Addressee", c => c.String());
+            AddColumn("dbo.Accounts", "DateTime", c => c.DateTime(nullable: false));
+            AddColumn("dbo.AccountMasters", "DateTime", c => c.DateTime(nullable: false));
+            DropForeignKey("dbo.Suppliers", "Country_Id", "dbo.Countries");
+            DropForeignKey("dbo.StockReceiveds", "Supplier_SupplierId", "dbo.Suppliers");
+            DropForeignKey("dbo.StockReceiveds", "Item_ItemId", "dbo.Items");
+            DropForeignKey("dbo.OrderMasters", "Client_ClientId", "dbo.Clients");
+            DropForeignKey("dbo.OrderDetails", "Unit_Id", "dbo.Units");
+            DropForeignKey("dbo.OrderDetails", "OrderMaster_OrderMasterId", "dbo.OrderMasters");
+            DropForeignKey("dbo.StockReceiveds", "Unit_Id", "dbo.Units");
+            DropForeignKey("dbo.Countries", "User_Id", "dbo.AspNetUsers");
+            DropForeignKey("dbo.AccountMasters", "User_Id", "dbo.AspNetUsers");
+            DropIndex("dbo.Suppliers", new[] { "Country_Id" });
+            DropIndex("dbo.StockReceiveds", new[] { "Unit_Id" });
+            DropIndex("dbo.StockReceiveds", new[] { "Supplier_SupplierId" });
+            DropIndex("dbo.StockReceiveds", new[] { "Item_ItemId" });
+            DropIndex("dbo.OrderMasters", new[] { "Client_ClientId" });
+            DropIndex("dbo.OrderDetails", new[] { "Unit_Id" });
+            DropIndex("dbo.OrderDetails", new[] { "OrderMaster_OrderMasterId" });
+            DropIndex("dbo.Countries", new[] { "User_Id" });
+            DropIndex("dbo.AccountMasters", new[] { "User_Id" });
+            AlterColumn("dbo.Suppliers", "Country_Id", c => c.Long(nullable: false));
+            AlterColumn("dbo.StockReceiveds", "Supplier_SupplierId", c => c.Long(nullable: false));
+            AlterColumn("dbo.StockReceiveds", "Item_ItemId", c => c.Long(nullable: false));
+            AlterColumn("dbo.OrderMasters", "Client_ClientId", c => c.Long(nullable: false));
+            AlterColumn("dbo.OrderDetails", "Unit_Id", c => c.Long(nullable: false));
+            AlterColumn("dbo.OrderDetails", "OrderMaster_OrderMasterId", c => c.Long(nullable: false));
+            DropColumn("dbo.Suppliers", "Date");
+            DropColumn("dbo.Suppliers", "MobileNo");
+            DropColumn("dbo.StockReceiveds", "Unit_Id");
+            DropColumn("dbo.StockReceiveds", "Date");
+            DropColumn("dbo.StockReceiveds", "Batch");
+            DropColumn("dbo.OrderDetails", "Date");
+            DropColumn("dbo.Countries", "User_Id");
+            DropColumn("dbo.Countries", "IsDeleted");
+            DropColumn("dbo.Countries", "UpdateDate");
+            DropColumn("dbo.Countries", "Date");
+            DropColumn("dbo.Clients", "Addresse");
+            DropColumn("dbo.Accounts", "Date");
+            DropColumn("dbo.AccountMasters", "User_Id");
+            DropColumn("dbo.AccountMasters", "Date");
+            RenameIndex(table: "dbo.OrderMasters", name: "IX_User_Id", newName: "IX_ApplicationUserId");
+            RenameIndex(table: "dbo.Items", name: "IX_User_Id", newName: "IX_ApplicationUserId");
+            RenameIndex(table: "dbo.Accounts", name: "IX_User_Id", newName: "IX_ApplicationUserId");
+            RenameColumn(table: "dbo.Suppliers", name: "Country_Id", newName: "CountryId");
+            RenameColumn(table: "dbo.StockReceiveds", name: "Supplier_SupplierId", newName: "SupplierId");
+            RenameColumn(table: "dbo.StockReceiveds", name: "Item_ItemId", newName: "ItemId");
+            RenameColumn(table: "dbo.OrderMasters", name: "User_Id", newName: "ApplicationUserId");
+            RenameColumn(table: "dbo.OrderMasters", name: "Client_ClientId", newName: "ClientId");
+            RenameColumn(table: "dbo.OrderDetails", name: "Unit_Id", newName: "UnitId");
+            RenameColumn(table: "dbo.OrderDetails", name: "OrderMaster_OrderMasterId", newName: "OrderMasterId");
+            RenameColumn(table: "dbo.Items", name: "User_Id", newName: "ApplicationUserId");
+            RenameColumn(table: "dbo.Accounts", name: "User_Id", newName: "ApplicationUserId");
+            CreateIndex("dbo.Suppliers", "CountryId");
+            CreateIndex("dbo.StockReceiveds", "SupplierId");
+            CreateIndex("dbo.StockReceiveds", "ItemId");
+            CreateIndex("dbo.OrderMasters", "ClientId");
+            CreateIndex("dbo.OrderDetails", "UnitId");
+            CreateIndex("dbo.OrderDetails", "OrderMasterId");
+            AddForeignKey("dbo.Suppliers", "CountryId", "dbo.Countries", "Id", cascadeDelete: true);
+            AddForeignKey("dbo.StockReceiveds", "SupplierId", "dbo.Suppliers", "SupplierId", cascadeDelete: true);
+            AddForeignKey("dbo.StockReceiveds", "ItemId", "dbo.Items", "ItemId", cascadeDelete: true);
+            AddForeignKey("dbo.OrderMasters", "ClientId", "dbo.Clients", "ClientId", cascadeDelete: true);
+            AddForeignKey("dbo.OrderDetails", "UnitId", "dbo.Units", "Id", cascadeDelete: true);
+            AddForeignKey("dbo.OrderDetails", "OrderMasterId", "dbo.OrderMasters", "OrderMasterId", cascadeDelete: true);
+        }
+    }
+}
