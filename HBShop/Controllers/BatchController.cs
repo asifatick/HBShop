@@ -20,7 +20,7 @@ namespace HBShop.Controllers
             var batches = uow.BatchRepository.GeBatches();
             return View(batches.ToList());
         }
-
+        //test
         // GET: /Batch/Details/5
         public ViewResult Details(int id)
         {
