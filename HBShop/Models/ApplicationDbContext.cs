@@ -8,16 +8,13 @@ namespace HBShop.Models
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
-
         public System.Data.Entity.DbSet<HBShop.Models.Account> Accounts { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.AccountMaster> AccountMasters { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Category> Categories { get; set; }
@@ -31,7 +28,6 @@ namespace HBShop.Models
         public System.Data.Entity.DbSet<HBShop.Models.Country> Countries { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Unit> Units { get; set; }
         public System.Data.Entity.DbSet<HBShop.Models.Batch> Batches { get; set; }
-
         
     }
 }

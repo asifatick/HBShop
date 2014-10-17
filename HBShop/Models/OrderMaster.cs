@@ -9,7 +9,6 @@ namespace HBShop.Models
     public class OrderMaster
     {
         public long OrderMasterId { get; set; }
-        
         public virtual Client Client { get; set; }
         public float TotalAmount { get; set; }
         public float Received { get; set; }

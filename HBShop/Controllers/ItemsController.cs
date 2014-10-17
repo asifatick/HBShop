@@ -69,7 +69,9 @@ namespace HBShop.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            ViewBag.CategoryId = new SelectList(uow.CategoryRepo.GetCategories(), "CategoryId", "CategoryName");
             Item item = uow.ItemRepo.GetItemById(id.Value);
+
             if (item == null)
             {
                 return HttpNotFound();

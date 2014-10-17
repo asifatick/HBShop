@@ -9,7 +9,7 @@ namespace HBShop.Models
     {
         public long SupplierId { get; set; }
         public string Name { get; set; }
-        public string ContractParson { get; set; }
+        public string ContactPerson { get; set; }
         public string Address { get; set; }
         public string PhoneNo { get; set; }
         public string MobileNo { get; set; }
