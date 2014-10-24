@@ -10,67 +10,74 @@ namespace HBShop.Controllers
 {
     public class OrderMasterController : Controller
     {
-        //UnitOfWork uow = new UnitOfWork();
+        private UnitOfWork uow = new UnitOfWork();
         // GET: /OrderMaster/
 
         public ActionResult Index()
         {
-            return View();
+            var orderMaster = uow.OrderMasterRepo.GetOrdersMaster();
+            return View(orderMaster.ToList());
         }
 
         //
         // GET: /OrderMaster/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            OrderMaster orderMaster = uow.OrderMasterRepo.GetOrderMasterById(id);
+            return View(orderMaster);
         }
 
         //
         // GET: /OrderMaster/Create
         public ActionResult Create()
         {
-            //ViewBag.OrderMasterId = new SelectList(uow.OrderMasterRepo.GetOrdersMaster(), "OrderMasterId");
-            return View();
+            //ViewBag.Status = new SelectList(uow.OrderMasterRepo.GetOrdersMaster(), "Order Status");
+            ViewBag.ClientId = new SelectList(uow.ClientRepo.GetClients(), "ClientId", "ClientName");
+            return View(new OrderMaster { });
         }
 
         //
         // POST: /OrderMaster/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(OrderMaster orderMaster)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
-
+                //test
+                orderMaster.UpdateDate = DateTime.Now;
+                orderMaster.Date = DateTime.Now;
+                uow.OrderMasterRepo.InsertOrderMaster(orderMaster);
+                uow.OrderMasterRepo.Save();
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
+            return View(orderMaster);
         }
 
         //
         // GET: /OrderMaster/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            OrderMaster orderMaster = uow.OrderMasterRepo.GetOrderMasterById(id);
+            return View(orderMaster);
         }
 
         //
         // POST: /OrderMaster/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit( OrderMaster orderMaster)
         {
             try
             {
-                // TODO: Add update logic here
-
+                if (ModelState.IsValid)
+                {
+                    uow.OrderMasterRepo.UpdateOrderMaster(orderMaster);
+                    uow.OrderMasterRepo.Save();
+                }
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View();
+                return View(orderMaster);
             }
         }
 
@@ -78,24 +85,33 @@ namespace HBShop.Controllers
         // GET: /OrderMaster/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            OrderMaster orderMaster = uow.OrderMasterRepo.GetOrderMasterById(id);
+            return View(orderMaster);
         }
 
         //
         // POST: /OrderMaster/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [ActionName("Delete")]
+        public ActionResult DeletConfirmed(int id)
         {
             try
             {
-                // TODO: Add delete logic here
-
+                OrderMaster orderMaster = uow.OrderMasterRepo.GetOrderMasterById(id);
+                uow.OrderMasterRepo.DeleteOrderMaster(id);
+                uow.OrderMasterRepo.Save();
                 return RedirectToAction("Index");
             }
             catch
             {
                 return View();
             }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            uow.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

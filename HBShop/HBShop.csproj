@@ -230,6 +230,10 @@
     <Compile Include="Migrations\201410170506405_changedOrder.Designer.cs">
       <DependentUpon>201410170506405_changedOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201410241008270_uploadedOrder.cs" />
+    <Compile Include="Migrations\201410241008270_uploadedOrder.Designer.cs">
+      <DependentUpon>201410241008270_uploadedOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountMasters.cs" />
@@ -732,18 +736,24 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Items\Index.cshtml" />
     <Content Include="Views\Items\Details.cshtml" />
     <Content Include="Views\Items\Create.cshtml" />
     <Content Include="Views\Items\Delete.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
-    <Content Include="Views\OrderDetatil\Index.cshtml" />
-    <Content Include="Views\OrderDetatil\Details.cshtml" />
-    <Content Include="Views\OrderDetatil\Create.cshtml" />
-    <Content Include="Views\OrderDetatil\Delete.cshtml" />
+    <Content Include="Views\OrderDetail\Index.cshtml" />
+    <Content Include="Views\OrderDetail\Details.cshtml" />
+    <Content Include="Views\OrderDetail\Create.cshtml" />
+    <Content Include="Views\OrderDetail\Delete.cshtml" />
     <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\OrderMaster\Create.cshtml" />
+    <Content Include="Views\OrderMaster\Delete.cshtml" />
+    <Content Include="Views\OrderMaster\Details.cshtml" />
+    <Content Include="Views\OrderMaster\Edit.cshtml" />
+    <Content Include="Views\OrderMaster\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\OrderDetail\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\images\" />
@@ -789,6 +799,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201410170506405_changedOrder.resx">
       <DependentUpon>201410170506405_changedOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201410241008270_uploadedOrder.resx">
+      <DependentUpon>201410241008270_uploadedOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

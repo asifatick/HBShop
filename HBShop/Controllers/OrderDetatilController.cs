@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace HBShop.Controllers
 {
-    public class OrderDetatilController : Controller
+    public class OrderDetailController : Controller
     {
         private UnitOfWork uow = new UnitOfWork();
 
@@ -40,8 +40,8 @@ namespace HBShop.Controllers
             if (ModelState.IsValid)
             {
                 //test
-                orderDetail.UpdateDate = DateTime.Now;
-                orderDetail.Date = DateTime.Now;
+                //orderDetail.UpdateDate = DateTime.Now;
+                orderDetail.Date = DateTime.Today;
                 uow.OrderDetailRepo.InsertOrderDetail(orderDetail);
                 uow.OrderDetailRepo.Save();
                 return RedirectToAction("Index");

@@ -11,6 +11,7 @@ namespace HBShop.Models
         //public long CategoryId { get; set; }
         public virtual Category Category { get; set; }
         public long ItemId { get; set; }
+        public long OrderMasterId { get; set; }
         public virtual Item Item { get; set; }
         public virtual OrderMaster OrderMaster { get; set; }
         public decimal UnitPrice { get; set; }

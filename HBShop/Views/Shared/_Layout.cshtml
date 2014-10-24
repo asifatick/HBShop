@@ -89,16 +89,17 @@
                 <div id="ddtopmenubar" class="mattblackmenu">
                   <!-- Main navigation -->
                     <ul>
+                        @*(DisplayName,ActionMethodName,ControllerName)*@
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         <li>@Html.ActionLink("Sales", "Index", "Home")</li>
                         <li>@Html.ActionLink("Category", "Index", "Category")</li>
                         <li>@Html.ActionLink("Item", "Index", "Items")</li>
                         <li>@Html.ActionLink("Batch", "Index", "Batch")</li>
                         <li>@Html.ActionLink("Purchase", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Order", "Index", "OrderDetatil")</li>
+                        <li>@Html.ActionLink("Order", "Index", "OrderMaster")</li>
                         <li>@Html.ActionLink("Supplier", "Index", "Supplier")</li>
                         <li>@Html.ActionLink("Client", "Index", "Client")</li>
-                      @*<li>@Html.ActionLink("About Us", "About", "Home")</li>
+                        @*<li>@Html.ActionLink("About Us", "About", "Home")</li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>*@
                         <li>@Html.ActionLink("Register", "Register", "Account")</li>
                         <li>@Html.ActionLink("Login", "Login", "Account")</li>

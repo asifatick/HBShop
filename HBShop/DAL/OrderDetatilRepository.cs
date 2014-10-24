@@ -11,6 +11,7 @@ namespace HBShop.DAL
     public interface IOrderDetailRepository : IDisposable
     {
         IEnumerable<OrderDetail> GetOrderDetails();
+        IEnumerable<OrderDetail> GetOrderDetailsByOrderId(long OrderId);
         OrderDetail GetOrderDetailById(long id);
         void InsertOrderDetail(OrderDetail orderDetail);
         void DeleteOrderDetail(long id);
@@ -29,6 +30,12 @@ namespace HBShop.DAL
         {
             return context.OrderDetails.ToList();
         }
+
+        public IEnumerable<OrderDetail> GetOrderDetailsByOrderId(long OrderId)
+        {
+            return context.OrderDetails.Where(x => x.OrderMasterId == OrderId).ToList();
+        }
+
         public OrderDetail GetOrderDetailById(long id)
         {
             return context.OrderDetails.Find(id);

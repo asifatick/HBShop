@@ -10,7 +10,7 @@ namespace HBShop.DAL
     public interface IOrderMasterRepository : IDisposable
     {
         IEnumerable<OrderMaster> GetOrdersMaster();
-        OrderMaster GetOrderMasterByID(long orderMasterId);
+        OrderMaster GetOrderMasterById(long orderMasterId);
         void InsertOrderMaster(OrderMaster orderMaster);
         void DeleteOrderMaster(long orderMasterId);
         void UpdateOrderMaster(OrderMaster orderMaster);
@@ -28,7 +28,7 @@ namespace HBShop.DAL
         {
             return context.OrderMaster.ToList();
         }
-        public OrderMaster GetOrderMasterByID(long orderMasterId)
+        public OrderMaster GetOrderMasterById(long orderMasterId)
         {
             return context.OrderMaster.Find(orderMasterId);
         }
