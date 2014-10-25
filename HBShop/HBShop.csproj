@@ -226,13 +226,9 @@
     <Compile Include="Migrations\201410131421543_AddedAfterEid.Designer.cs">
       <DependentUpon>201410131421543_AddedAfterEid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201410170506405_changedOrder.cs" />
-    <Compile Include="Migrations\201410170506405_changedOrder.Designer.cs">
-      <DependentUpon>201410170506405_changedOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201410241008270_uploadedOrder.cs" />
-    <Compile Include="Migrations\201410241008270_uploadedOrder.Designer.cs">
-      <DependentUpon>201410241008270_uploadedOrder.cs</DependentUpon>
+    <Compile Include="Migrations\201410251200304_addedOrderMasterId.cs" />
+    <Compile Include="Migrations\201410251200304_addedOrderMasterId.Designer.cs">
+      <DependentUpon>201410251200304_addedOrderMasterId.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -797,11 +793,8 @@
     <EmbeddedResource Include="Migrations\201410131421543_AddedAfterEid.resx">
       <DependentUpon>201410131421543_AddedAfterEid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201410170506405_changedOrder.resx">
-      <DependentUpon>201410170506405_changedOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201410241008270_uploadedOrder.resx">
-      <DependentUpon>201410241008270_uploadedOrder.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201410251200304_addedOrderMasterId.resx">
+      <DependentUpon>201410251200304_addedOrderMasterId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

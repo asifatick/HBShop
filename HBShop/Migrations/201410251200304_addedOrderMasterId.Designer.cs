@@ -7,13 +7,13 @@ namespace HBShop.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class uploadedOrder : IMigrationMetadata
+    public sealed partial class addedOrderMasterId : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(uploadedOrder));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(addedOrderMasterId));
         
         string IMigrationMetadata.Id
         {
-            get { return "201410241008270_uploadedOrder"; }
+            get { return "201410251200304_addedOrderMasterId"; }
         }
         
         string IMigrationMetadata.Source
